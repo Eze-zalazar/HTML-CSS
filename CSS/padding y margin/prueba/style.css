@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background: #111;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#game-box {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+}

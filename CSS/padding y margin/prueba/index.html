@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Juego</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>Haz clic al cuadrado</h1>
+    <p>Puntaje: <span id="score">0</span></p>
+
+    <div id="game-box"></div>
+
+    <script>
+        const box = document.getElementById('game-box');
+        const scoreSpan = document.getElementById('score');
+        let score = 0;
+
+        function moveBox() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 100);
+            box.style.left = x + 'px';
+            box.style.top = y + 'px';
+        }
+
+        box.addEventListener('click', () => {
+            score++;
+            scoreSpan.textContent = score;
+            moveBox();
+        });
+
+        moveBox();
+    </script>
+</body>
+</html>
