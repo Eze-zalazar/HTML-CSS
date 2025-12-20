@@ -1,0 +1,22 @@
+div{
+    background: #ededed;
+    padding: 20px;
+    font-family: sans-serif;
+    border-left: 2px solid #999 ;
+    margin-top: 1vmax;
+}
+h1{
+    margin: 0;
+    font-size: 20px;
+}
+span{
+    color: aqua;
+    font-size: 16px;
+    font-weight: 100;
+}
+P{
+    color: rebeccapurple;
+    width: 200px;
+    font-size: 0.25em;
+    margin: 10%;
+}
