@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+    color: bisque;
+}
+.card {
+    background-color: blue;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+}
+h1{
+    font-size: 20px;
+}
+h2{
+    font-size: 10px;
+}

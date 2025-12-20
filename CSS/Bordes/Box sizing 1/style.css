@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+.Caja{
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    margin: 10px;
+}
+.Caja-default{
+    box-sizing: content-box;
+    padding: 25px;
+    border: 10px solid cadetblue  ;
+    margin: 10px;   
+
+}
+.Caja-new{
+    box-sizing: border-box;
+    margin: 10 px;
+    padding: 10px;
+    border: 10px solid chartreuse;
+
+}
