@@ -1,0 +1,18 @@
+body{
+    background-color: aqua;
+}
+.box{
+    width: 100%;
+    height: 100px;
+    margin: 10px;
+    margin: 0;
+    background: url("https://p.novaskin.me/1gwi5j004lu.png?class=thumbnail") top / cover  fixed #6da;
+    
+
+
+}
+.opaco{
+    height: 100%;
+    width: 100%;
+    background-color: aqua;
+}

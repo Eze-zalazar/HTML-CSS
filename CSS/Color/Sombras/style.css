@@ -1,0 +1,30 @@
+.box{
+    width: 300px;
+    background-color: rgb(212, 212, 212);
+    box-shadow: 0px 40px 50px #000;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+h2{
+    padding: 20px;
+    font-family: sans-serif;
+    color: #000;
+}
+p{
+    list-style: none;
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 14px;
+    text-shadow: 0 0 40px red ;
+}
+img{
+    width: 100px;
+    border-radius: 100%;
+    margin: auto;
+    filter: drop-shadow(0px 0px 5px orange);
+}
