@@ -1,6 +1,17 @@
-.faltante{
-    color: aquamarine;
+/*Selector por atributo*/
+
+img[src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxcW0al-8KGbRGUbmvPrs9UFaEK8PhzbDNiA&s"]{
+    width: 100%;
 }
-#ingrediente-secreto{
-    color: rgb(82, 128, 128);
+/*selector por hijo directo*/
+li>em{
+    color: red;
+}
+/*selector descendiente*/
+ul li{
+    color: #666;
+}
+/*selector hermano generales*/
+h1 ~ p {
+    color: blue;
 }

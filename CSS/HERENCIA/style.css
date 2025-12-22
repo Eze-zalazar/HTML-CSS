@@ -1,0 +1,11 @@
+body{
+    color: blue;
+}
+div{
+    font-family: sans-serif;
+    color: rebeccapurple;
+}
+h1{
+    color: unset;
+    font-family: initial;
+}
