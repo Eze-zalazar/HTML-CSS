@@ -54,4 +54,8 @@ fieldset{
 legend{
     padding: 0 6px;
 }
+a{
+    color:blue;
+    text-decoration: none;
+}
 
