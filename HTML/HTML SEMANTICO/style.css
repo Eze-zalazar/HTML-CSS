@@ -1,0 +1,14 @@
+body{
+    position: relative;
+    height: 100vh;
+    margin: auto;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    font-size: 14px;
+    background-color: greenyellow;
+    color: black;
+    width: 100%;
+}
