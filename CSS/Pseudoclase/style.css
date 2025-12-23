@@ -1,0 +1,4 @@
+section :where( .elemento1 , .elemento2 ,  .elemento3){
+    color:aqua
+}
+section :has()

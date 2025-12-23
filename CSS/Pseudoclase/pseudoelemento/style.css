@@ -1,0 +1,26 @@
+div{
+    padding: 20px;
+}
+h1::first-letter{
+    color: red;
+    font-size: 3em;
+    letter-spacing: 1px ;
+
+}
+div::first-line{
+    color: red;
+}
+input::placeholder{
+    color: blueviolet;
+}
+li::marker{
+    color: red;
+}
+li::before{
+    content:"elemento: ";
+    color:red;
+}
+li::after{
+    content: "despues";
+    color: blue;
+}

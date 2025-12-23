@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+}
+div{
+    padding: 20px;
+    background-color: antiquewhite;
+}
+a{
+    background-color: red;
+    color: aqua;
+    border: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+    display: block;
+}
+p{
+    background-color: black;
+    color: antiquewhite;
+    display: inline;
+    margin: 5px;
+}

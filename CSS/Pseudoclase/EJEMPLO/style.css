@@ -1,0 +1,63 @@
+:root{
+    color: blueviolet;
+}
+
+h1{
+    color: aqua;
+    margin: 10px;
+}
+/*cuando pasamos el mause por encima*/
+h1:hover{
+    background-color: #ccc;
+    color: black;
+}
+/*mientras das clicks*/
+h1:active{
+    background-color: blue;
+    color: antiquewhite;
+}
+/*seleccionando el primer li*/
+li:first-child{
+    color: red;
+}
+
+
+/*seleccionamos al 2do elemento*/
+li:nth-child(2){
+    color: aqua;
+}
+/*seleccionar el ultimo li*/
+li:last-child{
+    color: orange
+
+}
+/*SELECCIONO LOS LI DE LISTA PERO NO TIENE LA CLASE EXCLUIR */
+
+.lista li:not(.excluir){
+    color: green;
+}
+/*SELECCIONANDO EL DIV EN CASO DE VACIO*/
+div:empty{
+    border: none;
+    background-color: blue;
+    padding: 30px;
+
+}
+/*seleccionando enlaces no visitados*/
+a:link{
+    color: red;
+}
+
+
+
+/*seleccionando enlaces  visitados*/
+a:visited{
+    color: green;
+}
+/*seleccionando inputs*/
+input:invalid{
+    color: red;
+}
+input:valid{
+    color: green;
+}
