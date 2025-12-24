@@ -1,3 +1,9 @@
+.contenedor{
+    border: 3px solid black;
+    margin: 20px;
+
+}
+
 body{
     margin: 0;
     background-color: #e6c7c7;
@@ -11,21 +17,19 @@ div{
     height: 100px;
     background-color: orange;
     color: white;
-    position: relative; /*la caja se mantiene ahi*/
-    border: 2px solid black;
 
+    border: 2px solid black;
+s
 }
 .box--blue{
      background-color: rgb(27, 27, 208);
-    margin-top: 10px;
-    left: 10px;
-    bottom: 10px;
-    z-index: 3;
+     position: absolute;
+     
+    
 }
 .box:first-child{
-    top: 150px;
-    left: 40px;
+   
     background-color: red;
-    z-index: 20px;
+   
 
 }
