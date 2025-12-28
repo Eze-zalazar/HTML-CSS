@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(105, 153, 153);
+    color: aliceblue;
+}
+/*Header section*/
+.header{
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-image: url("descarga.webp");
+    display: flex;
+    background-size: cover;}
+
+.header__overlay{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.181);
+    position: absolute;
+    z-index: 1;
+    }
+.header__item-container{
+    position: relative;
+    z-index: 10;
+    margin: auto    ;
+    text-align: center;
+    max-width: 700px;
+
+    }
+.header__item-container p{
+    text-wrap: pretty;
+}
+.header__img{
+    min-width: 200px;
+    max-width: 40%;
+    border-radius: 50%;
+    border: 10px solid beige;
+    margin: 20px;
+
+
+}
+
+h1{
+    margin: 0;
+    font-size: 50px;
+}
+/*Navbar section*/
+.nav {
+    background-color: rgb(17, 74, 124);
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.nav__ul {
+    list-style: none;
+    margin: 0;
+    display: flex;          /* ← clave */
+    gap: 20px;
+    justify-content: center;              /* separación entre links */
+}
+
+.nav__item {
+    list-style: none;
+}
+.nav__ulcontainer{
+    flex-grow: 1;
+}
+
+.nav__link {
+    color: yellowgreen;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 14px;
+    margin: 6px;
+    border-radius: 6px;          /* ← valor válido */
+    transition: border 0.3s, background-color 0.3s;
+    outline: 0;
+    outline-offset: 0;
+}
+.nav__link:hover{
+    background-color: azure;
+    border-radius: 20px;
+    outline: 2px solid brown;
+    outline-offset: -8px;
+
+}
+.link--login{
+    background-color: aqua;
+    color: aliceblue;
+    border-radius: 20px;
+}
+.link--login.hover{
+    background-color: aquamarine;
+}
+
+.nav__link:hover{
+    background-color: rgb(24, 44, 58);
+
+}
+/*Main*/
+main{
+    max-width: 1000px;
+    margin: auto;
+    font-size: 30px;
+    text-wrap: pretty;
+
+}
