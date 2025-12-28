@@ -44,6 +44,7 @@ header {
     flex-grow: 1;
     flex-wrap: wrap;
     justify-content: center;
+    flex-direction: column;
 }
 
 aside, main {
@@ -73,6 +74,10 @@ aside, main {
     display: inline-block;
     padding: 5px 10px;
 }
+aside:last-child{
+    min-width: 10rem;
+    display: none;
+}
 
 /* FOOTER */
 footer {
@@ -84,15 +89,19 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
+@media screen and (min-width: 480px) {
     aside:last-child {
-        display: none;
+        flex-direction: row;
+
+
+        
     }
 }
 
-@media (max-width: 400px) {
+@media screen and (min-width: 600px) {
     .main-wrapper {
-        flex-direction: column;
+       display: block;
+        
     }
 }
 
