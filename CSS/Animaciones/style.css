@@ -1,0 +1,39 @@
+body{
+    margin: 0;font-family: sans-serif;
+    background-color: #ccc;
+
+}
+div{
+    box-sizing: border-box;
+}
+.box{
+    margin: 20px;
+    background-color: #fff;
+    border: 3px solid black;
+    padding: 6px;
+    border-radius: 39px;
+    transition: border .6s steps(6);
+}
+.barra{
+    padding: 40px;
+    background-color: rgb(219, 13, 255);
+    border-radius: 30px;
+    width: 10%;
+    transition: width .6s   steps(6), background-color .6s steps(6) ;
+}
+.barra:active{
+    width: 100%;
+    transition-duration: 1s;
+    background-color: red;
+}
+
+.box:has(.barra:active){
+    border: 4px solid red;
+    transition-duration: 3s;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .barra, .box{
+        transition: none;
+    }
+}

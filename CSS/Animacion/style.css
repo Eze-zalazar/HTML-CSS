@@ -1,0 +1,48 @@
+body{
+    margin: 0;font-family: sans-serif;
+    background-color: #ccc;
+
+}
+div{
+    box-sizing: border-box;
+}
+.box{
+    margin: 20px;
+    background-color: #fff;
+    border: 3px solid black;
+    padding: 6px;
+    border-radius: 39px;
+}
+.barra{
+    padding: 40px;
+    background-color: rgb(219, 13, 255);
+    border-radius: 30px;
+    width: 10%;
+    animation-name: llenar-barra;
+    animation-duration: 2s;
+    animation-delay: 2s ;
+    animation-fill-mode:both ;
+    animation-timing-function: linear;
+    animation-direction: alternate ;
+    animation-iteration-count: 3;
+    animation-play-state: paused;
+
+
+}
+.barra:active{
+    animation-play-state: running;
+}
+
+
+@keyframes llenar-barra {
+    from{
+        width: 0%;
+        background-color: red;
+
+    }
+    to{
+        width: 100%;
+        background-color: red;
+    }
+    
+}

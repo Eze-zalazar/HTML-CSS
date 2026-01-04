@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn{
+    padding: 10px 40px;
+    background-color: transparent;
+    color: white;
+    border-radius: 6px;
+    letter-spacing: 3px;
+    position: relative; /* 👈 CLAVE */
+    cursor: pointer;
+    z-index: 1;
+}
+/*----BOTON 1---*/
+.btn-1{
+    border: 1px solid #48e;
+    overflow: hidden;
+}
+
+.btn-1::before{
+    content: "";
+    background-color: #48e;
+    position: absolute;
+    width: 140%;
+    height: 200%;
+    top: 100%;
+    left: -20%;
+    border-radius: 50%;
+    transition: top .6s ease;
+    z-index: -1;
+}
+
+/* hover correcto */
+.btn-1:hover::before{
+    top: -35%;
+}
+
+/*BOTON 2*/
+.button-container:has(.btn-2:hover){
+    filter: drop-shadow(0 0 15px #48e);
+}
+
+
+
+.btn-2{
+    border: 1px solid rgb(130, 130, 130);
+    color: white;
+}
+.btn-2:hover{
+animation: parpadear 3s infinite alternate backwards;
+}
+@keyframes parpadear {
+    0%{
+        color: #48e;
+        border: 1px solid rgb(130, 130, 130);
+        text-shadow:    none;
+        box-shadow: none    ;
+
+    }
+    25%{
+            border-color: #48e;
+    color: #48e;
+    box-shadow: 0px 0px 6px #48e, 0px 0px 16px #48e;
+    text-shadow: 0px 0px 6px #48e, 0px 0px 16px rgb(130, 130, 130);
+    }
+      50%{
+        color: #48e;
+        border: 1px solid rgb(130, 130, 130);
+       text-shadow:    none;
+        box-shadow: none    ;
+
+    }
+    100%{
+            border-color: #48e;
+    color: #48e;
+    box-shadow: 0px 0px 6px #48e, 0px 0px 16px #48e;
+    text-shadow: 0px 0px 6px #48e, 0px 0px 16px rgb(130, 130, 130);
+    }
+    
+}
+/* ---- BOTON 3 ---- */
+.btn-3{
+    border: 2px solid transparent;
+    color: white;
+    background:
+        linear-gradient(black, black) padding-box,
+        linear-gradient(120deg, #48e, #8f5cff, #48e) border-box;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* brillo que recorre el botón */
+.btn-3::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(72, 136, 255, 0.6),
+        transparent
+    );
+    transition: left .6s ease;
+}
+
+.btn-3:hover::after{
+    left: 120%;
+}
+
+/* glow suave al hover */
+.btn-3:hover{
+    box-shadow:
+        0 0 10px #48e,
+        0 0 25px rgba(72, 136, 255, 0.6);
+}
+
