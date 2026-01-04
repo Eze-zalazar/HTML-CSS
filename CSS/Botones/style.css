@@ -128,3 +128,61 @@ animation: parpadear 3s infinite alternate backwards;
         0 0 25px rgba(72, 136, 255, 0.6);
 }
 
+
+/* ---- BOTON AUTOS ---- */
+.btn-4{
+    border: 2px solid #ff2e2e;
+    color: #fff;
+    background: linear-gradient(180deg, #111, #000);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* línea de velocidad */
+.btn-4::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 46, 46, 0.9),
+        transparent
+    );
+    transition: left .4s cubic-bezier(.6,0,.2,1);
+}
+
+/* barras tipo velocímetro */
+.btn-4::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 8px,
+        rgba(255,255,255,.06) 8px,
+        rgba(255,255,255,.06) 10px
+    );
+    opacity: .3;
+}
+
+.btn-4:hover::before{
+    left: 120%;
+}
+
+/* glow de aceleración */
+.btn-4:hover{
+    box-shadow:
+        0 0 10px #ff2e2e,
+        0 0 25px rgba(255,46,46,.7);
+    border-color: #ff5c5c;
+}
+
+

@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    filter: drop-shadow(0px 0px 15px #fff9)
+     drop-shadow(0px 0px 12px #fff9)
+      drop-shadow(0px 0px 1px #fff);
+}
+.text{
+    color: aliceblue;
+    letter-spacing: 3px;
+    font-family: monospace;
+
+    width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+
+    animation:
+        typing 3s steps(7) forwards,
+        move 1s ease forwards;
+
+    animation-delay:
+        0s,
+        3s; /* 👈 empieza cuando termina typing */
+}
+
+/* cursor */
+.text::before{
+    content: "";
+    width: 2px;
+    height: 100%;
+    background-color: aliceblue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    animation: blink .6s infinite;
+}
+
+/* escribir */
+@keyframes typing{
+    from{ width: 0; }
+    to{ width: 100%; }
+}
+
+/* moverse a la derecha */
+@keyframes move{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(200px); }
+}
+
+/* cursor blink */
+@keyframes blink{
+    0%, 50%, 100%{ opacity: 1; }
+    25%, 75%{ opacity: 0; }
+}
+

@@ -1,0 +1,27 @@
+body{
+    min-height: 200vh;
+    margin: 0;
+}
+
+.box{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.barra{
+    height: 30px;
+    background-color: #48e;
+    border-radius: 20px;
+
+    animation-name: llenar-barra;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+}
+
+@keyframes llenar-barra{
+    from{ width: 0%; }
+    to{ width: 100%; }
+}
