@@ -1,0 +1,236 @@
+/* RESET */
+*{
+    box-sizing: border-box;
+}
+body,div,ul,li,a,h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+}
+label, .sidebar__nav{
+    user-select: none;
+}
+
+body{
+    --bg-color: color-mix(in srgb, rgb(173, 162, 143) 70%, white);
+    --sidebar-color: white;
+    --dark-color: rgb(223, 185, 115);
+    background-color: var(--bg-color);
+    font-family: sans-serif;
+}
+
+/* SIDEBAR */
+.sidebar{
+    background-color: var(--sidebar-color);
+    position: fixed;
+    height: 100dvh;
+    width: clamp(220px, 20vw, 300px);
+    font-size: clamp(1rem, 2.2vw, 3rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 0 30px 6px;
+    transition: width .3s ease;
+}
+
+.sidebar img{
+    max-width: 100%;
+}
+
+/* NAV */
+.sidebar__nav{
+    flex: 1;
+    display: flex;
+}
+.sidebar__nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+/* ITEMS */
+.sidebar__item{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: .9rem;
+    color: var(--dark-color);
+    border-radius: 36px 0 0 36px;
+    position: relative;
+}
+
+.sidebar__item span{
+    padding: 12px;
+    font-size: 2rem;
+}
+
+.sidebar__item a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* HOVER NORMAL */
+.sidebar__item:hover{
+    background-color: var(--bg-color);
+    color: var(--sidebar-color);
+}
+
+/* EFECTO LATERAL */
+.sidebar__item::before,
+.sidebar__item::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.sidebar__item:hover::before{
+    top: -16px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 4px 4px 0 4px var(--bg-color);
+}
+
+.sidebar__item:hover::after{
+    bottom: -16px;
+    border-top-right-radius: 25px;
+    box-shadow: 4px -4px 0 4px var(--bg-color);
+}
+
+/* LOGO */
+.sidebar__picture{
+    margin: 1.5rem;
+}
+.sidebar__picture img{
+    width: clamp(4rem, 75%, 20rem);
+    margin: auto;
+    opacity: .82;
+    filter: hue-rotate(-22deg);
+}
+
+/* PROFILE */
+.sidebar__profile img{
+    border-radius: 50%;
+    width: 2.8rem;
+}
+.profile-option{
+    font-size: .7rem;
+}
+
+.item--profile{
+    padding: 4px;
+    border-radius: 999px;
+}
+.item--profile:hover{
+    background-color:var(--bg-color);
+}
+.item--profile:hover .profile-option{
+    text-decoration: underline;
+}
+.item--profile:hover img{
+    opacity: .7;
+}
+.item--profile::before,
+.item--profile::after{
+    display: none;
+}
+
+/* CHECKBOX */
+input[type="checkbox"]{
+    display: none;
+}
+
+/* FORM / BOTONES */
+.sidebar__form{
+    position: absolute;
+    z-index: 20;
+    right: -1rem;
+}
+.open-button{
+    display: none;
+}
+.close-button{
+    display: inline-block;
+}
+
+.sidebar label{
+    background-color: var(--bg-color);
+    color: var(--sidebar-color);
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+/* ---------- ESTADO COLAPSADO ---------- */
+
+.sidebar:has(#open-menu:checked){
+    width: 80px;
+    padding-left: 0;
+}
+
+/* mostrar / ocultar botones */
+.sidebar:has(#open-menu:checked) .close-button{
+    display: none;
+}
+
+.sidebar:has(#open-menu:checked) .open-button{
+    display: inline-block;
+}
+
+
+/* ocultar textos */
+.sidebar:has(#open-menu:checked) .sidebar__item a,
+.sidebar:has(#open-menu:checked) .profile-option{
+    display: none;
+}
+
+/* ocultar logo */
+.sidebar:has(#open-menu:checked) .sidebar__picture img{
+    display: none;
+}
+
+/* centrar íconos */
+.sidebar:has(#open-menu:checked) .sidebar__item{
+    justify-content: center;
+}
+
+/* quitar hover cuando está colapsado */
+.sidebar:has(#open-menu:checked) .sidebar__item:hover{
+    background-color: transparent;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        width: 260px;
+        transform: translateX(-100%);
+        transition: transform .3s ease;
+        z-index: 100;
+    }
+
+    /* cuando está abierto */
+    .sidebar:has(#open-menu:checked) {
+        transform: translateX(0);
+        width: 260px;
+    }
+
+    /* en mobile NO colapsamos a íconos */
+    .sidebar:has(#open-menu:checked) .sidebar__item a,
+    .sidebar:has(#open-menu:checked) .profile-option,
+    .sidebar:has(#open-menu:checked) .sidebar__picture img {
+        display: inline;
+    }
+
+    .sidebar:has(#open-menu:checked) .sidebar__item {
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 768px) {
+    .open-button {
+        display: none;
+    }
+
+    .close-button {
+        display: inline-block;
+    }
+}
