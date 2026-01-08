@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --color-principal: #48e;
+    --color-secundario: rgb(15, 104, 148);
+}
+
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.box{
+    padding: 0 40px;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    border: 6px solid violet;
+}
+
+.box:first-child{
+    height: 200px;
+}
+
+.box:nth-child(2){
+    height: clamp(150px, 30vh, 300px);
+    overflow: auto;
+}
+
+
